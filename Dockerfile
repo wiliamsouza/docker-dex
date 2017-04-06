@@ -21,4 +21,10 @@ RUN cd $DEX_HOME && \
 
 WORKDIR $DEX_HOME
 
-EXPOSE 5554 5555 5556 5557
+EXPOSE 5554-5557
+
+ENTRYPOINT ["dex"]
+
+VOLUME ["/etc/dex"]
+
+CMD ["version"]
